@@ -1,13 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Homework 2 WebDev</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: darkgray;
+            text-align: center;
+            padding: 50px;
+        }
+        h1{
+            color: rgb(128,216,120);
+        }
+        p{
+            color: rgb(128,216,120)
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .container {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-    <h1>WebDev Homework 2</h1>
-    <p>info for the page</p>
-    <p>some more info</p>
+
+<div class="container">
+    <h1>Welcome!</h1>
+    <img src="Undead_Scribe.jpg">
+    <h1 id="greeting"></h1>
+</div>
+
+<script>
+    const userName = prompt("What's your name?");
+    const greetingElement = document.getElementById('greeting');
+    if (userName) {
+        greetingElement.textContent = `Hello, ${userName}!`;
+    } else {
+        greetingElement.textContent = "Hello, Guest!";
+    }
+</script>
+
 </body>
 </html>
